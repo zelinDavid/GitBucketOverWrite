@@ -51,6 +51,10 @@
 
 #pragma mark  - configuration
 -(void)configureFMDB {
+    [[FMDatabaseQueue sharedInstance]inDatabase:^(FMDatabase *db) {
+        
+    }];
+    
     
 }
 

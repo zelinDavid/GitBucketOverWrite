@@ -23,6 +23,8 @@
 		63D7DA521F14BCA200AFDD21 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA081F14B8D200AFDD21 /* AFNetworking.framework */; };
 		63D7DA531F14BCB400AFDD21 /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA0C1F14B8D200AFDD21 /* ISO8601DateFormatter.framework */; };
 		63D7DA541F14BCFF00AFDD21 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA491F14B93F00AFDD21 /* Mantle.framework */; };
+		63D7DA7A1F14C8C900AFDD21 /* DVFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D7DA791F14C8C900AFDD21 /* DVFactory.m */; };
+		63D7DA7D1F14C92E00AFDD21 /* DVTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D7DA7C1F14C92E00AFDD21 /* DVTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,11 +178,15 @@
 		63D7CDB11F1483A200AFDD21 /* FMDatabaseQueue+MRCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabaseQueue+MRCHelper.m"; sourceTree = "<group>"; };
 		63D7CDB21F1483A200AFDD21 /* DVConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVConst.h; sourceTree = "<group>"; };
 		63D7CDB31F1483A200AFDD21 /* DVConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVConst.m; sourceTree = "<group>"; };
-		63D7CDB41F1483A200AFDD21 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		63D7CDB41F1483A200AFDD21 /* DVMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVMacro.h; sourceTree = "<group>"; };
 		63D7D9FE1F14B8D200AFDD21 /* OctoKitDependencies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKitDependencies.xcodeproj; path = OctoKit/External/OctoKitDependencies/OctoKitDependencies.xcodeproj; sourceTree = "<group>"; };
 		63D7DA1D1F14B8E600AFDD21 /* OctoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKit.xcodeproj; path = OctoKit/OctoKit.xcodeproj; sourceTree = "<group>"; };
 		63D7DA2E1F14B92A00AFDD21 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = OctoKit/Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		63D7DA3D1F14B93F00AFDD21 /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mantle.xcodeproj; path = OctoKit/Carthage/Checkouts/Mantle/Mantle.xcodeproj; sourceTree = "<group>"; };
+		63D7DA781F14C8C900AFDD21 /* DVFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVFactory.h; sourceTree = "<group>"; };
+		63D7DA791F14C8C900AFDD21 /* DVFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVFactory.m; sourceTree = "<group>"; };
+		63D7DA7B1F14C92E00AFDD21 /* DVTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTool.h; sourceTree = "<group>"; };
+		63D7DA7C1F14C92E00AFDD21 /* DVTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVTool.m; sourceTree = "<group>"; };
 		C1315163B323366B129EC58F /* libPods-GitBucketOverWrite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitBucketOverWrite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D8B38BCCC4FEABD25CE03A /* Pods-GitBucketOverWrite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitBucketOverWrite.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitBucketOverWrite/Pods-GitBucketOverWrite.release.xcconfig"; sourceTree = "<group>"; };
 		E4C053DB221B6DED05E151A5 /* Pods-GitBucketOverWrite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitBucketOverWrite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitBucketOverWrite/Pods-GitBucketOverWrite.debug.xcconfig"; sourceTree = "<group>"; };
@@ -313,7 +319,11 @@
 				63D7CDAF1F1483A200AFDD21 /* Category */,
 				63D7CDB21F1483A200AFDD21 /* DVConst.h */,
 				63D7CDB31F1483A200AFDD21 /* DVConst.m */,
-				63D7CDB41F1483A200AFDD21 /* Macro.h */,
+				63D7CDB41F1483A200AFDD21 /* DVMacro.h */,
+				63D7DA781F14C8C900AFDD21 /* DVFactory.h */,
+				63D7DA791F14C8C900AFDD21 /* DVFactory.m */,
+				63D7DA7B1F14C92E00AFDD21 /* DVTool.h */,
+				63D7DA7C1F14C92E00AFDD21 /* DVTool.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -711,7 +721,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D7CDB51F1483A200AFDD21 /* FMDatabaseQueue+MRCHelper.m in Sources */,
+				63D7DA7D1F14C92E00AFDD21 /* DVTool.m in Sources */,
 				637C87111F1362220064E951 /* ViewController.m in Sources */,
+				63D7DA7A1F14C8C900AFDD21 /* DVFactory.m in Sources */,
 				637C86E01F13325D0064E951 /* AppDelegate.m in Sources */,
 				63D7CDB61F1483A200AFDD21 /* DVConst.m in Sources */,
 				637C86DD1F13325D0064E951 /* main.m in Sources */,

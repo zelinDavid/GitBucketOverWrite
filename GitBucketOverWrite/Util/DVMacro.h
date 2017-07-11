@@ -6,8 +6,8 @@
 //  Copyright © 2017年 David. All rights reserved.
 //
 
-#ifndef Macro_h
-#define Macro_h
+#ifndef DVMacro_h
+#define DVMacro_h
 
 ///------
 /// NSLog
@@ -78,4 +78,29 @@ typedef id   (^IDBlock_id)  (id);
 #define kTabbarHeight        49
 
 
-#endif /* Macro_h */
+///------------
+/// AppDelegate
+///------------
+
+#define DVSharedAppDelegate ((MRCAppDelegate *)[UIApplication sharedApplication].delegate)
+
+///----------------------
+/// Persistence Directory
+///----------------------
+#define MRC_DOCUMENT_DIRECTORY NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* DVMacro_h */
