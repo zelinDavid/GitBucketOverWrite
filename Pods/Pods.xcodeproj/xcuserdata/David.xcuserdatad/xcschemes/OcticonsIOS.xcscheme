@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FB89BADDB6F33A3DE20F8616686E23A6'
+               BlueprintIdentifier = '3C3850E0D7D0CAB2118DB9617066A2F2'
                BlueprintName = 'OcticonsIOS'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'OcticonsIOS.framework'>
+               BuildableName = 'libOcticonsIOS.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
