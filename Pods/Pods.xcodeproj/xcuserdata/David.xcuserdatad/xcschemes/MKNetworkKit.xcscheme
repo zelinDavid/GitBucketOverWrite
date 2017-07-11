@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5E9A3DE24F3157BFBC43EC1B4E6F8176'
+               BlueprintIdentifier = '0020E72EFACB863E5B4679E45E18BBC8'
                BlueprintName = 'MKNetworkKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMKNetworkKit.a'>
+               BuildableName = 'MKNetworkKit.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

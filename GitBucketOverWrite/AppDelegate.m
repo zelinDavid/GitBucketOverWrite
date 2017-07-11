@@ -48,4 +48,10 @@
 }
 
 
+
+#pragma mark  - configuration
+-(void)configureFMDB {
+    
+}
+
 @end

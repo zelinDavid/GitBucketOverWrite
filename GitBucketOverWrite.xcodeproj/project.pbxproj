@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C7B686EBCCB3EF3873A27B2 /* libPods-GitBucketOverWrite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9204329430EC4391D76A6612 /* libPods-GitBucketOverWrite.a */; };
 		637C86DD1F13325D0064E951 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C86DC1F13325D0064E951 /* main.m */; };
 		637C86E01F13325D0064E951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C86DF1F13325D0064E951 /* AppDelegate.m */; };
 		637C86E61F13325D0064E951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637C86E41F13325D0064E951 /* Main.storyboard */; };
@@ -16,6 +15,7 @@
 		637C86F61F13325D0064E951 /* GitBucketOverWriteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C86F51F13325D0064E951 /* GitBucketOverWriteTests.m */; };
 		637C87011F13325D0064E951 /* GitBucketOverWriteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C87001F13325D0064E951 /* GitBucketOverWriteUITests.m */; };
 		637C87111F1362220064E951 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C87101F1362220064E951 /* ViewController.m */; };
+		91ADA7D24FC2FC8A91B42A6B /* Pods_GitBucketOverWrite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC925F524ACFBDCCF830556 /* Pods_GitBucketOverWrite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,8 @@
 		637C87021F13325D0064E951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		637C870F1F1362220064E951 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		637C87101F1362220064E951 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9204329430EC4391D76A6612 /* libPods-GitBucketOverWrite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitBucketOverWrite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		637C87171F1363FA0064E951 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9FC925F524ACFBDCCF830556 /* Pods_GitBucketOverWrite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitBucketOverWrite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D8B38BCCC4FEABD25CE03A /* Pods-GitBucketOverWrite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitBucketOverWrite.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitBucketOverWrite/Pods-GitBucketOverWrite.release.xcconfig"; sourceTree = "<group>"; };
 		E4C053DB221B6DED05E151A5 /* Pods-GitBucketOverWrite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitBucketOverWrite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitBucketOverWrite/Pods-GitBucketOverWrite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C7B686EBCCB3EF3873A27B2 /* libPods-GitBucketOverWrite.a in Frameworks */,
+				91ADA7D24FC2FC8A91B42A6B /* Pods_GitBucketOverWrite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				637C86E41F13325D0064E951 /* Main.storyboard */,
+				637C87171F1363FA0064E951 /* PrefixHeader.pch */,
 				637C86E71F13325D0064E951 /* Assets.xcassets */,
 				637C86E91F13325D0064E951 /* LaunchScreen.storyboard */,
 				637C86EC1F13325D0064E951 /* Info.plist */,
@@ -199,7 +201,7 @@
 		CC6FC74D615FB925D7C3585C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9204329430EC4391D76A6612 /* libPods-GitBucketOverWrite.a */,
+				9FC925F524ACFBDCCF830556 /* Pods_GitBucketOverWrite.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -274,6 +276,7 @@
 				TargetAttributes = {
 					637C86D71F13325C0064E951 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TC973ZGWG3;
 						ProvisioningStyle = Automatic;
 					};
 					637C86F01F13325D0064E951 = {
@@ -540,9 +543,13 @@
 			baseConfigurationReference = E4C053DB221B6DED05E151A5 /* Pods-GitBucketOverWrite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TC973ZGWG3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GitBucketOverWrite/PrefixHeader.pch";
 				INFOPLIST_FILE = GitBucketOverWrite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.GitBucketOverWrite;
+				PRODUCT_BUNDLE_IDENTIFIER = David.test.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -552,9 +559,13 @@
 			baseConfigurationReference = E3D8B38BCCC4FEABD25CE03A /* Pods-GitBucketOverWrite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TC973ZGWG3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GitBucketOverWrite/PrefixHeader.pch";
 				INFOPLIST_FILE = GitBucketOverWrite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.GitBucketOverWrite;
+				PRODUCT_BUNDLE_IDENTIFIER = David.test.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

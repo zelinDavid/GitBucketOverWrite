@@ -20,8 +20,9 @@ pod 'MLeaksFinder', '0.2.0'
 pod 'OcticonsIOS'
 pod 'LCFInfiniteScrollView'
 pod 'YYKit'
-
-
+pod 'OctoKit'
+pod  'ReactiveCocoa', '2.2.4'
+ use_frameworks!
 
 end
 

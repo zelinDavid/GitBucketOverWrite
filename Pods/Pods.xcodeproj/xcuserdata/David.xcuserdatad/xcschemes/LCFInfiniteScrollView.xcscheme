@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A58DE2B877209E0FFFCBFDFD406C82B5'
+               BlueprintIdentifier = '14F2ED1B86A80181F658CE0F9408AC13'
                BlueprintName = 'LCFInfiniteScrollView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libLCFInfiniteScrollView.a'>
+               BuildableName = 'LCFInfiniteScrollView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
