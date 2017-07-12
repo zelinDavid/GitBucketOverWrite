@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Appirater/Appirater.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +17,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self configureFMDB];
+    [self configureReachability];
+    [self configureAppirater];
+    [self configureAppearance];
+    [self configureUmengSocial];
+    [self configureUmengSocial];
+    
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
+    
+    
+    
+    
     return YES;
 }
 
@@ -62,13 +75,58 @@
             if (![db executeStatements:sql]) {
                 MRCLogLastError(db);
             }
-            
-        }
+         }
         
-        
-    }];
-    
-    
+     }];
 }
+
+-(void)configureAppearance {
+    self.window.backgroundColor = [UIColor whiteColor];
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:(48 - 40) / 215.0 green:(67 - 40) / 215.0 blue:(78 - 40) / 215.0 alpha:1];
+    [UINavigationBar appearance].barStyle  = UIBarStyleBlack;
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    
+    [UISegmentedControl appearance].tintColor = [UIColor whiteColor];
+    
+    [UITabBar appearance].tintColor = HexRGB(colorI3);
+}
+
+- (void)configureKeyboardManager {
+    IQKeyboardManager.sharedManager.enableAutoToolbar = NO;
+    IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = YES;
+}
+
+
+-(void)configureReachability {
+    _reachability = [Reachability reachabilityForInternetConnection];
+    RAC(self,reachability) = [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:kReachabilityChangedNotification object:nil] map:^id(NSNotification *notification) {
+        
+        return @([notification.object currentReachabilityStatus]);
+    }]  distinctUntilChanged];
+}
+
+-(void)configureUmengSocial {
+    [UMSocialData setAppKey:MRC_UM_APP_KEY];
+    [UMSocialWechatHandler setWXAppId:MRC_WX_APP_ID appSecret:MRC_WX_APP_SECRET url:MRC_UM_SHARE_URL];
+    [UMSocialSinaHandler openSSOWithRedirectURL:MRC_WEIBO_REDIRECT_URL];
+    [UMSocialQQHandler setQQWithAppId:MRC_QQ_APP_ID appKey:MRC_QQ_APP_KEY url:MRC_UM_SHARE_URL];
+    
+    [UMSocialConfig hiddenNotInstallPlatforms:@[ UMShareToQQ, UMShareToQzone, UMShareToWechatSession, UMShareToWechatTimeline ]];
+
+
+}
+
+
+- (void)configureAppirater {
+    [Appirater setAppId:MRC_APP_ID];
+    [Appirater setDaysUntilPrompt:7];
+    [Appirater setUsesUntilPrompt:5];
+    [Appirater setSignificantEventsUntilPrompt:-1];
+    [Appirater setTimeBeforeReminding:2];
+    [Appirater setDebug:NO];
+    [Appirater appLaunched:YES];
+}
+
+
 
 @end

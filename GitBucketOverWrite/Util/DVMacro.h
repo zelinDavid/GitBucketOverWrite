@@ -83,6 +83,8 @@ alpha:1.0]
 
 
 
+//other
+#define WS(weakSelf) __weak __typeof(&*self) weakSelf = self;
 
 
 
