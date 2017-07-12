@@ -52,6 +52,19 @@
 #pragma mark  - configuration
 -(void)configureFMDB {
     [[FMDatabaseQueue sharedInstance]inDatabase:^(FMDatabase *db) {
+        NSString *version = [DVTool standardUserDefaultsObjectForKey:MRCApplicationVersionKey];
+        if (![version isEqualToString:MRC_APP_VERSION] && version == nil) {
+            [SSKeychain deleteAccessToken];
+            
+            NSString *path = [[NSBundle mainBundle] pathForResource:@"update_v1_2_0" ofType:@"sql"];
+            NSString *sql  = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+            
+            if (![db executeStatements:sql]) {
+                MRCLogLastError(db);
+            }
+            
+        }
+        
         
     }];
     

@@ -19,29 +19,6 @@
 #define NSLog(...) {}
 #endif
 
-///------
-/// Block
-///------
-
-typedef void (^VoidBlock)();
-typedef BOOL (^BoolBlock)();
-typedef int  (^IntBlock) ();
-typedef id   (^IDBlock)  ();
-
-typedef void (^VoidBlock_int)(int);
-typedef BOOL (^BoolBlock_int)(int);
-typedef int  (^IntBlock_int) (int);
-typedef id   (^IDBlock_int)  (int);
-
-typedef void (^VoidBlock_string)(NSString *);
-typedef BOOL (^BoolBlock_string)(NSString *);
-typedef int  (^IntBlock_string) (NSString *);
-typedef id   (^IDBlock_string)  (NSString *);
-
-typedef void (^VoidBlock_id)(id);
-typedef BOOL (^BoolBlock_id)(id);
-typedef int  (^IntBlock_id) (id);
-typedef id   (^IDBlock_id)  (id);
 
 
 ///------
@@ -51,6 +28,13 @@ typedef id   (^IDBlock_id)  (id);
 #define DefaultBackGroundColor               RGBFromHex(0x00c6f6)
 #define DefaultTextColor                     RGBFromHex(0x333333)
 #define DefaultTableViewColor                RGBFromHex(0xefeff4)
+
+#define RGBFromHex(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+alpha:1.0]
+
 #define      ColorFromRGB(R,G,B,A)    [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A/1.0]
 
 

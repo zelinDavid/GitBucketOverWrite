@@ -14,7 +14,7 @@
     static FMDatabaseQueue *databaseQueue = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        databaseQueue = [FMDatabaseQueue databaseQueueWithPath:MRC_FMDB_PATH];
+        databaseQueue = [FMDatabaseQueue databaseQueueWithPath:MRC_FMDB_PATH];
     });
     return databaseQueue;
 }

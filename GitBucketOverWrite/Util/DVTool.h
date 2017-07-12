@@ -17,9 +17,26 @@ FOUNDATION_EXTERN UIFont *FitFont(CGFloat font);
 
 @interface DVTool : NSObject
 
-
-
+#pragma mark - BOOL判断
 +(BOOL)isPhoneNumber:(NSString *)str;
++ (BOOL) validateEmail:(NSString *)email;
+//  字符串中是否含有特殊字符
+//+(BOOL)containSpecialCharaterWith:(NSString *)str ;
++(BOOL)isEmailStr:(NSString *)str ;
+
+
+#pragma mark - UserDefaultsStore
++(id)standardUserDefaultsObjectForKey:(NSString *)key ;
++(void)standardUserDefaultsSetObject:(id)object forKey:(NSString *)key ;
++(void)synchronize;
+
+
+
+
+
+
+
+
 
 
 
