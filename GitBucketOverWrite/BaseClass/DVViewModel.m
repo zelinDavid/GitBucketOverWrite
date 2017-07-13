@@ -26,16 +26,14 @@
         [weakSelf initialize];
     }];
     
-    
-    return viewModel;
+     return viewModel;
 }
-
 
 -(instancetype)initWithSerVice:(id<DVViewModelService>)service paragram:(NSDictionary *)param {
     if (self = [super init]) {
         _shouldFetchLocalDataOnViewModel = YES;
         _shoudldRequestRemoteDataOnViewModel = YES;
-        _title    = param[@"title"];
+        _title    = [param existObjectForkey:@"title"];
         _service = service;
         _params   = param;
     }
@@ -44,6 +42,26 @@
 
 -(void)initialize { }
 
+
+
+-(RACCommand *)remoteRequestCommand {
+    if (_remoteRequestCommand == nil) {
+        _remoteRequestCommand =  [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSNumber *page) {
+            
+            return [[self remoteRequestLoading:page]takeUntil:self.rac_willDeallocSignal];
+        }];
+    }
+    return _remoteRequestCommand;
+}
+
+
+-(RACSignal *)remoteRequestLoading:(NSNumber *)page {
+    
+    return [[RACSignal alloc]init];
+}
+
+
+//-(void)remoteRequestLoding
 
 -(RACSubject *)errorSignal {
     if (!_errorSignal) {

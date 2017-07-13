@@ -15,6 +15,8 @@
 - (void)popViewModelAnimated:(BOOL)animated;
 - (void)popToRootViewModelAnimated:(BOOL)animated;
 - (void)presentViewModel:(DVViewModel *)viewModel animated:(BOOL)animated completion:(VoidBlock)completion;
+- (void)dismissViewModelAnimated:(BOOL)animated completion:(VoidBlock)completion ;
 
+- (void)resetRootViewModel:(DVViewModel *)viewModel ;
 
 @end

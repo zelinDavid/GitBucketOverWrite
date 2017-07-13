@@ -19,7 +19,6 @@ typedef NS_ENUM(NSUInteger,TitleViewType) {
 
 @interface DVViewModel : NSObject
 
-@property(nonatomic, strong) RACSignal *remoteRequestSignal;
 @property(nonatomic, strong,readonly) id<DVViewModelService> service;
 
 @property (nonatomic, assign,readonly)TitleViewType viewType;
@@ -31,6 +30,9 @@ typedef NS_ENUM(NSUInteger,TitleViewType) {
 
 @property (nonatomic, assign)BOOL shouldFetchLocalDataOnViewModel;
 @property (nonatomic, assign)BOOL shoudldRequestRemoteDataOnViewModel;
+@property(nonatomic, strong) RACCommand *remoteRequestCommand;
+@property (nonatomic, assign)NSInteger page;
+@property (nonatomic, assign)NSInteger perPage;
 
 @property(nonatomic, strong,readonly) RACSubject *errorSignal;
 @property(nonatomic, strong,readonly) RACSubject *willDisappearSignal;

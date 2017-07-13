@@ -35,8 +35,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import "MRCConstant.h"
+ #import "MRCConstant.h"
 #import "MRCUtil.h"
 #import "MRCConfig.h"
 #import "MRCErrors.h"

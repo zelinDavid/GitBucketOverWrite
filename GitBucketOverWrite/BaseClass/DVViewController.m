@@ -23,6 +23,8 @@
         @strongify(viewController)
          [viewController bindViewModel];
     }];
+  
+    
  
     return viewController;
 }
@@ -30,6 +32,14 @@
 -(instancetype)initWithModel:(DVViewModel *)viewModel {
     if (self = [super init]) {
         _viewModel = viewModel;
+        if (_viewModel.shouldFetchLocalDataOnViewModel) {
+            WS(weakSelf)
+            [[self rac_signalForSelector:@selector(viewDidLoad)]
+            subscribeNext:^(id x) {
+                [weakSelf.viewModel.remoteRequestCommand execute:@1];
+            }];
+        }
+        
     }
     return self;
 }
@@ -40,7 +50,7 @@
     self.extendedLayoutIncludesOpaqueBars = YES;
     
     
-    
+    [self bindViewModel];
 }
 
 

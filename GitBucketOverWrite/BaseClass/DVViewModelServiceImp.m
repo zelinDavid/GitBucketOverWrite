@@ -27,6 +27,8 @@
 -(void)popViewModelAnimated:(BOOL)animated{}
 -(void)presentViewModel:(DVViewModel *)viewModel animated:(BOOL)animated completion:(VoidBlock)completion{}
 -(void)popToRootViewModelAnimated:(BOOL)animated {}
+- (void)dismissViewModelAnimated:(BOOL)animated completion:(VoidBlock)completion {}
 
+- (void)resetRootViewModel:(DVViewModel *)viewModel {}
 
 @end

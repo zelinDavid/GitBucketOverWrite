@@ -22,7 +22,6 @@
     [self configureAppirater];
     [self configureAppearance];
     [self configureUmengSocial];
-    [self configureUmengSocial];
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
