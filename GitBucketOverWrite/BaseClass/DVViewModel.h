@@ -39,7 +39,7 @@ typedef NS_ENUM(NSUInteger,TitleViewType) {
 @property (nonatomic, copy, readonly) NSDictionary *params;
 
 
--(instancetype)initWithSerVice:(id<DVViewModelService>)service paragram:(NSDictionary *)param ;
+-(instancetype)initWithServices:(id<DVViewModelService>)service params:(NSDictionary *)param ;
 
 -(void)initialize;
 

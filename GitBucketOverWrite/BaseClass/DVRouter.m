@@ -35,7 +35,7 @@
 -(NSDictionary *)mapDict {
     if (_mapDict == nil) {
         _mapDict = @{
-                     @""  : @"",
+                     @"DVLoginViewModel"  : @"LoginViewController",
                      @""  : @"",
                      @""  : @"",
                      @""  : @"",

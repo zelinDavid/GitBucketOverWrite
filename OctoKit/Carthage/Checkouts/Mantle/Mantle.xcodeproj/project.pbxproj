@@ -814,7 +814,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D094E4831777619600906BF7 /* Debug.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -825,7 +824,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D094E4851777619600906BF7 /* Release.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -836,7 +834,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D094E4921777619600906BF7 /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -849,7 +846,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D094E4921777619600906BF7 /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -895,7 +891,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D094E4841777619600906BF7 /* Profile.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -906,7 +901,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D094E4921777619600906BF7 /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -935,7 +929,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D094E4861777619600906BF7 /* Test.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -946,7 +939,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D094E4921777619600906BF7 /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;

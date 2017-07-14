@@ -69,6 +69,12 @@
 		635853B11F15FE550001ECDD /* DVViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 635853B01F15FE550001ECDD /* DVViewModel.m */; };
 		635853B41F15FE680001ECDD /* DVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635853B31F15FE680001ECDD /* DVViewController.m */; };
 		635853B71F15FFE50001ECDD /* DVViewModelServiceImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 635853B61F15FFE50001ECDD /* DVViewModelServiceImp.m */; };
+		63629EE71F185A700090E7C7 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA491F14B93F00AFDD21 /* Mantle.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		63629EEA1F185E5F0090E7C7 /* ISO8601DateFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA0C1F14B8D200AFDD21 /* ISO8601DateFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63629EEB1F185E6C0090E7C7 /* OctoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA291F14B8E600AFDD21 /* OctoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63629EEC1F185E780090E7C7 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA081F14B8D200AFDD21 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63629EED1F185E7F0090E7C7 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA3A1F14B92B00AFDD21 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63629EEE1F185E870090E7C7 /* Mantle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA491F14B93F00AFDD21 /* Mantle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		637C86DD1F13325D0064E951 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C86DC1F13325D0064E951 /* main.m */; };
 		637C86E01F13325D0064E951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C86DF1F13325D0064E951 /* AppDelegate.m */; };
 		637C86E61F13325D0064E951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637C86E41F13325D0064E951 /* Main.storyboard */; };
@@ -78,11 +84,10 @@
 		637C87011F13325D0064E951 /* GitBucketOverWriteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C87001F13325D0064E951 /* GitBucketOverWriteUITests.m */; };
 		637C87111F1362220064E951 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C87101F1362220064E951 /* ViewController.m */; };
 		63D7CDB61F1483A200AFDD21 /* DVConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDB31F1483A200AFDD21 /* DVConst.m */; };
-		63D7DA501F14BC8C00AFDD21 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA3A1F14B92B00AFDD21 /* ReactiveCocoa.framework */; };
-		63D7DA511F14BC9700AFDD21 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA291F14B8E600AFDD21 /* OctoKit.framework */; };
-		63D7DA521F14BCA200AFDD21 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA081F14B8D200AFDD21 /* AFNetworking.framework */; };
-		63D7DA531F14BCB400AFDD21 /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA0C1F14B8D200AFDD21 /* ISO8601DateFormatter.framework */; };
-		63D7DA541F14BCFF00AFDD21 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA491F14B93F00AFDD21 /* Mantle.framework */; };
+		63D7DA501F14BC8C00AFDD21 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA3A1F14B92B00AFDD21 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		63D7DA511F14BC9700AFDD21 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA291F14B8E600AFDD21 /* OctoKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		63D7DA521F14BCA200AFDD21 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA081F14B8D200AFDD21 /* AFNetworking.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		63D7DA531F14BCB400AFDD21 /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA0C1F14B8D200AFDD21 /* ISO8601DateFormatter.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		63D7DA7A1F14C8C900AFDD21 /* DVFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D7DA791F14C8C900AFDD21 /* DVFactory.m */; };
 		63D7DA7D1F14C92E00AFDD21 /* DVTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D7DA7C1F14C92E00AFDD21 /* DVTool.m */; };
 /* End PBXBuildFile section */
@@ -215,6 +220,24 @@
 			remoteInfo = "Mantle-iOSTests";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63629EE91F185E050090E7C7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				63629EEE1F185E870090E7C7 /* Mantle.framework in Embed Frameworks */,
+				63629EED1F185E7F0090E7C7 /* ReactiveCocoa.framework in Embed Frameworks */,
+				63629EEC1F185E780090E7C7 /* AFNetworking.framework in Embed Frameworks */,
+				63629EEB1F185E6C0090E7C7 /* OctoKit.framework in Embed Frameworks */,
+				63629EEA1F185E5F0090E7C7 /* ISO8601DateFormatter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		63151C871F170B35001DC1E6 /* DVNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVNavigationController.h; sourceTree = "<group>"; };
@@ -365,7 +388,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D7DA541F14BCFF00AFDD21 /* Mantle.framework in Frameworks */,
+				63629EE71F185A700090E7C7 /* Mantle.framework in Frameworks */,
 				63D7DA531F14BCB400AFDD21 /* ISO8601DateFormatter.framework in Frameworks */,
 				63D7DA521F14BCA200AFDD21 /* AFNetworking.framework in Frameworks */,
 				63D7DA511F14BC9700AFDD21 /* OctoKit.framework in Frameworks */,
@@ -868,6 +891,7 @@
 				637C86D61F13325C0064E951 /* Resources */,
 				185F343CAFCDBC141EAD4CF8 /* [CP] Embed Pods Frameworks */,
 				0218B0700E820FB32F5512D2 /* [CP] Copy Pods Resources */,
+				63629EE91F185E050090E7C7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

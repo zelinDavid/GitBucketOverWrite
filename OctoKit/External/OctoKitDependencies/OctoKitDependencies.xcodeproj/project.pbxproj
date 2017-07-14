@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63D7DA4D1F14B98500AFDD21 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA4C1F14B98500AFDD21 /* OctoKit.framework */; };
-		63D7DA4E1F14B99900AFDD21 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0040C9919FEC274002869A6 /* AFNetworking.framework */; };
-		63D7DA4F1F14B9B000AFDD21 /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0476E5E17791AA50071F3CB /* ISO8601DateFormatter.framework */; };
 		D0040CD819FEC494002869A6 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D0476DD4177916C60071F3CB /* AFHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0040CD919FEC494002869A6 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0476DD5177916C60071F3CB /* AFHTTPClient.m */; };
 		D0040CDA19FEC494002869A6 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D0476DD6177916C60071F3CB /* AFHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,7 +53,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63D7DA4C1F14B98500AFDD21 /* OctoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OctoKit.framework; path = "../../build/Debug-iphoneos/OctoKit.framework"; sourceTree = "<group>"; };
 		D0040C6019FEBF49002869A6 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		D0040C6219FEBF49002869A6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		D0040C6319FEBF49002869A6 /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -133,9 +129,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D7DA4F1F14B9B000AFDD21 /* ISO8601DateFormatter.framework in Frameworks */,
-				63D7DA4E1F14B99900AFDD21 /* AFNetworking.framework in Frameworks */,
-				63D7DA4D1F14B98500AFDD21 /* OctoKit.framework in Frameworks */,
 				F688018817C1CA7600ECC7EC /* Security.framework in Frameworks */,
 				D0476E291779181C0071F3CB /* AppKit.framework in Frameworks */,
 				D0476E23177918020071F3CB /* SystemConfiguration.framework in Frameworks */,
@@ -245,7 +238,6 @@
 		D0476DBF177916920071F3CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				63D7DA4C1F14B98500AFDD21 /* OctoKit.framework */,
 				F688018717C1CA7600ECC7EC /* Security.framework */,
 				D0476E281779181C0071F3CB /* AppKit.framework */,
 				D0476DC5177916920071F3CB /* Foundation.framework */,
@@ -577,7 +569,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0040C6519FEBF49002869A6 /* Test.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
@@ -592,13 +583,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = (
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "AFNetworking/AFNetworking-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.AFNetworking.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = AFNetworking;
@@ -631,7 +615,6 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = "AFNetworking/AFNetworking-Info.plist";
@@ -649,7 +632,6 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = "AFNetworking/AFNetworking-Info.plist";
@@ -667,7 +649,6 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = "AFNetworking/AFNetworking-Info.plist";
@@ -685,7 +666,6 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				INFOPLIST_FILE = "AFNetworking/AFNetworking-Info.plist";
@@ -780,7 +760,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0040C6219FEBF49002869A6 /* Debug.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -794,7 +773,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0040C6419FEBF49002869A6 /* Release.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
@@ -809,13 +787,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = (
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "AFNetworking/AFNetworking-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.AFNetworking.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = AFNetworking;
@@ -830,13 +801,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = (
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "AFNetworking/AFNetworking-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.AFNetworking.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = AFNetworking;
@@ -848,7 +812,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0040C6319FEBF49002869A6 /* Profile.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
@@ -863,13 +826,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = (
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "AFNetworking/AFNetworking-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.AFNetworking.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = AFNetworking;

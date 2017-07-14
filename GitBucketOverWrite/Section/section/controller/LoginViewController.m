@@ -28,9 +28,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    self.userImageView.image = [UIImage octicon_imageWithIdentifier:@"Person" size:CGSizeMake(22, 22)];
-    self.passwordImageView.image = [UIImage octicon_imageWithIdentifier:@"Lock" size:CGSizeMake(22, 22)];
+    
+    RACCommand *command = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        NSLog(@"command测试");
+        //        RACSubject *subject =  [RACSubject subject];
+        //        [subject sendNext:@""];
+        //        [subject sendError:nil];
+        
+        //        return subject;
+        
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendError:nil];
+            return nil;
+        }];
+        
+    }];
+    [command execute:nil];
+    
+    [command.errors subscribeNext:^(id x) {
+        NSLog(@"<<<<<<<%@",x);
+    }];
+    
     
     if ([SSKeychain rawLogin]!= nil) {
         self.UserTextfield.text = [SSKeychain rawLogin];
@@ -60,24 +78,27 @@
          }
      }];
     
-    RAC(self.viewModel,user) = RACObserve(self.UserTextfield, text);
-    RAC(self.viewModel,password) = RACObserve(self.passwordTextfield, text);
+//    RAC(self.viewModel,user) =  self.UserTextfield.rac_textSignal;
+//    RAC(self.viewModel,password) =  self.passwordTextfield.rac_textSignal;
     
-    [self.viewModel.signInBtnEnabledSiganl subscribeNext:^(NSNumber *enable) {
-        weakSelf.LoginBtn.enabled = [enable boolValue];
-    }];
+//    [self.viewModel.signInBtnEnabledSiganl subscribeNext:^(NSNumber *enable) {
+//        weakSelf.LoginBtn.enabled = [enable boolValue];
+//    }];
     
-    [[self.LoginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        [weakSelf.viewModel.loginCommand execute:nil];
-    }];
+//    [[self.LoginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+//        [weakSelf.viewModel.loginCommand execute:nil];
+//    }];
     
-    [self.viewModel.loginCommand.errors subscribeNext:^(id x) {
-        NSLog(@"登录失败");
-        
-    }];
-    
+//    [self.viewModel.loginCommand.errors subscribeNext:^(id x) {
+//        NSLog(@"登录失败");
+//        
+//    }];
+    NSLog(@"%@",self.viewModel);
+
     
 }
+
+
 
 
 

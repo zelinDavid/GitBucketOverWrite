@@ -22,14 +22,14 @@
 +(instancetype)allocWithZone:(struct _NSZone *)zone {
    DVViewModel *viewModel = [super allocWithZone:zone];
     WS(weakSelf)
-    [[viewModel  rac_signalForSelector:@selector(initWithSerVice:paragram:)] subscribeNext:^(id x) {
+    [[viewModel  rac_signalForSelector:@selector(initWithServices:params:)] subscribeNext:^(id x) {
         [weakSelf initialize];
     }];
     
      return viewModel;
 }
 
--(instancetype)initWithSerVice:(id<DVViewModelService>)service paragram:(NSDictionary *)param {
+-(instancetype)initWithServices:(id<DVViewModelService>)service params:(NSDictionary *)param {
     if (self = [super init]) {
         _shouldFetchLocalDataOnViewModel = YES;
         _shoudldRequestRemoteDataOnViewModel = YES;

@@ -8,8 +8,12 @@
 
 #import "AppDelegate.h"
 #import <Appirater/Appirater.h>
+#import "DVViewModelServiceImp.h"
+#import "DVLoginViewModel.h"
 
 @interface AppDelegate ()
+@property(nonatomic, strong) DVViewModelServiceImp *service;
+@property(nonatomic, strong) Reachability *reachability;
 
 @end
 
@@ -26,38 +30,73 @@
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     
+    _service = [[DVViewModelServiceImp alloc]init];
+    _stack = [[DVNavigationStack alloc]initWithService:_service];
+   
+//    [self.service resetRootViewModel:[self getTheOriganViewModel]];
+//    [self.window makeKeyAndVisible];
     
     
+    // Save the application version info.
+    [[NSUserDefaults standardUserDefaults] setValue:MRC_APP_VERSION forKey:MRCApplicationVersionKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    
+    RACCommand *command = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        NSLog(@"command测试");
+        //        RACSubject *subject =  [RACSubject subject];
+        //        [subject sendNext:@""];
+        //        [subject sendError:nil];
+        
+        //        return subject;
+        
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendError:nil];
+            return nil;
+        }];
+        
+    }];
+    [command execute:nil];
+    
+    [command.errors subscribeNext:^(id x) {
+        NSLog(@"<<<<<<<%@",x);
+    }];
+    
+ 
     
     return YES;
 }
 
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+
+- (DVViewModel *)getTheOriganViewModel {
+//    if ([SSKeychain rawLogin].isExist && [SSKeychain accessToken].isExist) {
+//        // Some OctoKit APIs will use the `login` property of `OCTUser`.
+//        OCTUser *user = [OCTUser mrc_userWithRawLogin:[SSKeychain rawLogin] server:OCTServer.dotComServer];
+//        
+//        OCTClient *authenticatedClient = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
+//        self.service.client = authenticatedClient;
+//        
+//        return  [[DVViewModel alloc]init];
+////        return [[MRCHomepageViewModel alloc] initWithServices:self.services params:nil];
+//    } else {
+//        return (DVViewModel *)[[DVLoginViewModel alloc] initWithServices:self.service params:nil];
+//
+//    }
+
+    return (DVViewModel *)[[DVLoginViewModel alloc] initWithServices:self.service params:nil];
+
 }
 
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([url.scheme isEqual:MRC_URL_SCHEME]) {
+        [OCTClient completeSignInWithCallbackURL:url];
+        return YES;
+    }
+    return [UMSocialSnsService handleOpenURL:url];
 }
 
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
 
 
 
@@ -98,10 +137,14 @@
 
 -(void)configureReachability {
     _reachability = [Reachability reachabilityForInternetConnection];
-    RAC(self,reachability) = [[[[NSNotificationCenter defaultCenter]rac_addObserverForName:kReachabilityChangedNotification object:nil] map:^id(NSNotification *notification) {
-        
-        return @([notification.object currentReachabilityStatus]);
-    }]  distinctUntilChanged];
+    
+    RAC(self, networkStatus) = [[[[[NSNotificationCenter defaultCenter]
+                                   rac_addObserverForName:kReachabilityChangedNotification object:nil]
+                                  map:^(NSNotification *notification) {
+                                      return @([notification.object currentReachabilityStatus]);
+                                  }]
+                                 startWith:@(self.reachability.currentReachabilityStatus)]
+                                distinctUntilChanged];
 }
 
 -(void)configureUmengSocial {

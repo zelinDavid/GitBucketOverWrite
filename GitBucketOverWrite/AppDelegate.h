@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Reachability/Reachability.h>
-
+#import "DVNavigationStack.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, strong) Reachability *reachability;
-
+@property (nonatomic, assign) NetworkStatus networkStatus;
+@property(nonatomic, strong,readonly) DVNavigationStack *stack;
 
 @end
 

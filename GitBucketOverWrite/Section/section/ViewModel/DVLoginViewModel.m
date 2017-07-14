@@ -16,8 +16,8 @@
     self.shouldFetchLocalDataOnViewModel = NO ;
  
     
-    _signInBtnEnabledSiganl = [[RACSignal combineLatest:@[RACObserve(self, user),RACObserve(self, password)] reduce:^id(NSString *user,NSString *password){
-         return @(user.length &&password.length);
+    _signInBtnEnabledSiganl = [[RACSignal combineLatest:@[RACObserve(self, user),RACObserve(self, password)] reduce:^id(NSString *userstr,NSString *passwordstr){
+         return @(userstr.length &&passwordstr.length);
     }]distinctUntilChanged];
     
     @weakify(self)
