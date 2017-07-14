@@ -10,8 +10,8 @@
  
 @implementation DVLoginViewModel
 
--(void)initialize {
-    [super initialize];
+-(void)customInitialize {
+    [super  customInitialize];
     self.shoudldRequestRemoteDataOnViewModel = NO ;
     self.shouldFetchLocalDataOnViewModel = NO ;
  
@@ -20,9 +20,11 @@
          return @(userstr.length &&passwordstr.length);
     }]distinctUntilChanged];
     
-    @weakify(self)
+    [OCTClient setClientID:MRC_CLIENT_ID clientSecret:MRC_CLIENT_SECRET];
 
-    void(^logSuccessBlock)(OCTClient *) = ^(OCTClient *authenticatedClient){
+    
+    @weakify(self)
+     void(^logSuccessBlock)(OCTClient *) = ^(OCTClient *authenticatedClient){
         @strongify(self)
         [[MRCMemoryCache sharedInstance] setObject:authenticatedClient.user forKey:@"currentUser"];
         
@@ -42,6 +44,8 @@
     
     _loginCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(NSString *oneTimePassword) {
         OCTUser *user = [OCTUser userWithRawLogin:self.user server:OCTServer.dotComServer];
+        NSLog(@"user--%@  password  %@",self.user,self.password);
+        
         return [[OCTClient
                  signInAsUser:user password:self.password oneTimePassword:oneTimePassword scopes:OCTClientAuthorizationScopesUser | OCTClientAuthorizationScopesRepository note:nil noteURL:nil fingerprint:nil]
                 doNext:logSuccessBlock];

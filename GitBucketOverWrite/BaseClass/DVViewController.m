@@ -48,9 +48,8 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.extendedLayoutIncludesOpaqueBars = YES;
-    
-    
-    [self bindViewModel];
+ 
+
 }
 
 

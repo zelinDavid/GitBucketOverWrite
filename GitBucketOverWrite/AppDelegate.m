@@ -33,8 +33,8 @@
     _service = [[DVViewModelServiceImp alloc]init];
     _stack = [[DVNavigationStack alloc]initWithService:_service];
    
-//    [self.service resetRootViewModel:[self getTheOriganViewModel]];
-//    [self.window makeKeyAndVisible];
+    [self.service resetRootViewModel:[self getTheOriganViewModel]];
+    [self.window makeKeyAndVisible];
     
     
     // Save the application version info.
@@ -42,27 +42,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 
     
-    RACCommand *command = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-        NSLog(@"command测试");
-        //        RACSubject *subject =  [RACSubject subject];
-        //        [subject sendNext:@""];
-        //        [subject sendError:nil];
-        
-        //        return subject;
-        
-        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            [subscriber sendError:nil];
-            return nil;
-        }];
-        
-    }];
-    [command execute:nil];
     
-    [command.errors subscribeNext:^(id x) {
-        NSLog(@"<<<<<<<%@",x);
-    }];
-    
- 
     
     return YES;
 }

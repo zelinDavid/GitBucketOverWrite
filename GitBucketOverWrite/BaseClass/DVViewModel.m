@@ -21,9 +21,10 @@
 
 +(instancetype)allocWithZone:(struct _NSZone *)zone {
    DVViewModel *viewModel = [super allocWithZone:zone];
-    WS(weakSelf)
+    @weakify(viewModel);
     [[viewModel  rac_signalForSelector:@selector(initWithServices:params:)] subscribeNext:^(id x) {
-        [weakSelf initialize];
+        @strongify(viewModel);
+        [viewModel customInitialize];
     }];
     
      return viewModel;
@@ -40,7 +41,9 @@
     return self;
 }
 
--(void)initialize { }
+-(void)customInitialize {
+
+}
 
 
 
@@ -57,7 +60,7 @@
 
 -(RACSignal *)remoteRequestLoading:(NSNumber *)page {
     
-    return [[RACSignal alloc]init];
+    return  [RACSignal empty];
 }
 
 
