@@ -75,6 +75,17 @@
 		63629EEC1F185E780090E7C7 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA081F14B8D200AFDD21 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63629EED1F185E7F0090E7C7 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA3A1F14B92B00AFDD21 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63629EEE1F185E870090E7C7 /* Mantle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA491F14B93F00AFDD21 /* Mantle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63629F2C1F18ADCC0090E7C7 /* DVAViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F2A1F18ADCC0090E7C7 /* DVAViewcontroller.m */; };
+		63629F2D1F18ADCC0090E7C7 /* DVAViewcontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63629F2B1F18ADCC0090E7C7 /* DVAViewcontroller.xib */; };
+		63629F311F18ADDE0090E7C7 /* DVBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F2F1F18ADDE0090E7C7 /* DVBViewController.m */; };
+		63629F321F18ADDE0090E7C7 /* DVBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63629F301F18ADDE0090E7C7 /* DVBViewController.xib */; };
+		63629F361F18ADF20090E7C7 /* DVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F341F18ADF20090E7C7 /* DVCViewController.m */; };
+		63629F371F18ADF20090E7C7 /* DVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63629F351F18ADF20090E7C7 /* DVCViewController.xib */; };
+		63629F3B1F18AE040090E7C7 /* DVDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F391F18AE040090E7C7 /* DVDViewController.m */; };
+		63629F3C1F18AE040090E7C7 /* DVDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63629F3A1F18AE040090E7C7 /* DVDViewController.xib */; };
+		63629F3F1F18AF660090E7C7 /* DVHomeTableBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F3E1F18AF660090E7C7 /* DVHomeTableBarController.m */; };
+		63629F421F18C81B0090E7C7 /* DVHomeTabbarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F411F18C81B0090E7C7 /* DVHomeTabbarViewModel.m */; };
+		63629F481F18C9E50090E7C7 /* DVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F471F18C9E50090E7C7 /* DVTabBarController.m */; };
 		637C86DD1F13325D0064E951 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C86DC1F13325D0064E951 /* main.m */; };
 		637C86E01F13325D0064E951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C86DF1F13325D0064E951 /* AppDelegate.m */; };
 		637C86E61F13325D0064E951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637C86E41F13325D0064E951 /* Main.storyboard */; };
@@ -82,7 +93,6 @@
 		637C86EB1F13325D0064E951 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637C86E91F13325D0064E951 /* LaunchScreen.storyboard */; };
 		637C86F61F13325D0064E951 /* GitBucketOverWriteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C86F51F13325D0064E951 /* GitBucketOverWriteTests.m */; };
 		637C87011F13325D0064E951 /* GitBucketOverWriteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C87001F13325D0064E951 /* GitBucketOverWriteUITests.m */; };
-		637C87111F1362220064E951 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C87101F1362220064E951 /* ViewController.m */; };
 		63D7CDB61F1483A200AFDD21 /* DVConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDB31F1483A200AFDD21 /* DVConst.m */; };
 		63D7DA501F14BC8C00AFDD21 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA3A1F14B92B00AFDD21 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		63D7DA511F14BC9700AFDD21 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA291F14B8E600AFDD21 /* OctoKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -350,6 +360,24 @@
 		635853B61F15FFE50001ECDD /* DVViewModelServiceImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVViewModelServiceImp.m; sourceTree = "<group>"; };
 		635853BA1F161CC90001ECDD /* DVNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVNavigationProtocol.h; sourceTree = "<group>"; };
 		635853BB1F16211D0001ECDD /* DVViewModelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVViewModelService.h; sourceTree = "<group>"; };
+		63629F291F18ADCC0090E7C7 /* DVAViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVAViewcontroller.h; sourceTree = "<group>"; };
+		63629F2A1F18ADCC0090E7C7 /* DVAViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVAViewcontroller.m; sourceTree = "<group>"; };
+		63629F2B1F18ADCC0090E7C7 /* DVAViewcontroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVAViewcontroller.xib; sourceTree = "<group>"; };
+		63629F2E1F18ADDE0090E7C7 /* DVBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVBViewController.h; sourceTree = "<group>"; };
+		63629F2F1F18ADDE0090E7C7 /* DVBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVBViewController.m; sourceTree = "<group>"; };
+		63629F301F18ADDE0090E7C7 /* DVBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVBViewController.xib; sourceTree = "<group>"; };
+		63629F331F18ADF20090E7C7 /* DVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCViewController.h; sourceTree = "<group>"; };
+		63629F341F18ADF20090E7C7 /* DVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCViewController.m; sourceTree = "<group>"; };
+		63629F351F18ADF20090E7C7 /* DVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVCViewController.xib; sourceTree = "<group>"; };
+		63629F381F18AE040090E7C7 /* DVDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVDViewController.h; sourceTree = "<group>"; };
+		63629F391F18AE040090E7C7 /* DVDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVDViewController.m; sourceTree = "<group>"; };
+		63629F3A1F18AE040090E7C7 /* DVDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVDViewController.xib; sourceTree = "<group>"; };
+		63629F3D1F18AF660090E7C7 /* DVHomeTableBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVHomeTableBarController.h; sourceTree = "<group>"; };
+		63629F3E1F18AF660090E7C7 /* DVHomeTableBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVHomeTableBarController.m; sourceTree = "<group>"; };
+		63629F401F18C81A0090E7C7 /* DVHomeTabbarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVHomeTabbarViewModel.h; sourceTree = "<group>"; };
+		63629F411F18C81B0090E7C7 /* DVHomeTabbarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVHomeTabbarViewModel.m; sourceTree = "<group>"; };
+		63629F461F18C9E50090E7C7 /* DVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTabBarController.h; sourceTree = "<group>"; };
+		63629F471F18C9E50090E7C7 /* DVTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVTabBarController.m; sourceTree = "<group>"; };
 		637C86D81F13325C0064E951 /* GitBucketOverWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitBucketOverWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		637C86DC1F13325D0064E951 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		637C86DE1F13325D0064E951 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -364,8 +392,6 @@
 		637C86FC1F13325D0064E951 /* GitBucketOverWriteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitBucketOverWriteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		637C87001F13325D0064E951 /* GitBucketOverWriteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitBucketOverWriteUITests.m; sourceTree = "<group>"; };
 		637C87021F13325D0064E951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		637C870F1F1362220064E951 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		637C87101F1362220064E951 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		637C87171F1363FA0064E951 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		63D7CDB21F1483A200AFDD21 /* DVConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVConst.h; sourceTree = "<group>"; };
 		63D7CDB31F1483A200AFDD21 /* DVConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVConst.m; sourceTree = "<group>"; };
@@ -628,6 +654,8 @@
 			children = (
 				635853AF1F15FE550001ECDD /* DVViewModel.h */,
 				635853B01F15FE550001ECDD /* DVViewModel.m */,
+				63629F461F18C9E50090E7C7 /* DVTabBarController.h */,
+				63629F471F18C9E50090E7C7 /* DVTabBarController.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -685,6 +713,206 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		63629F111F18ACB50090E7C7 /* B */ = {
+			isa = PBXGroup;
+			children = (
+				63629F121F18ACB50090E7C7 /* controller */,
+				63629F131F18ACB50090E7C7 /* Model */,
+				63629F141F18ACB50090E7C7 /* pic */,
+				63629F151F18ACB50090E7C7 /* VIew */,
+				63629F161F18ACB50090E7C7 /* ViewModel */,
+			);
+			path = B;
+			sourceTree = "<group>";
+		};
+		63629F121F18ACB50090E7C7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				63629F2E1F18ADDE0090E7C7 /* DVBViewController.h */,
+				63629F2F1F18ADDE0090E7C7 /* DVBViewController.m */,
+				63629F301F18ADDE0090E7C7 /* DVBViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		63629F131F18ACB50090E7C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63629F141F18ACB50090E7C7 /* pic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pic;
+			sourceTree = "<group>";
+		};
+		63629F151F18ACB50090E7C7 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		63629F161F18ACB50090E7C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63629F171F18ACBD0090E7C7 /* A */ = {
+			isa = PBXGroup;
+			children = (
+				63629F181F18ACBD0090E7C7 /* controller */,
+				63629F191F18ACBD0090E7C7 /* Model */,
+				63629F1A1F18ACBD0090E7C7 /* pic */,
+				63629F1B1F18ACBD0090E7C7 /* VIew */,
+				63629F1C1F18ACBD0090E7C7 /* ViewModel */,
+			);
+			path = A;
+			sourceTree = "<group>";
+		};
+		63629F181F18ACBD0090E7C7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				63629F291F18ADCC0090E7C7 /* DVAViewcontroller.h */,
+				63629F2A1F18ADCC0090E7C7 /* DVAViewcontroller.m */,
+				63629F2B1F18ADCC0090E7C7 /* DVAViewcontroller.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		63629F191F18ACBD0090E7C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63629F1A1F18ACBD0090E7C7 /* pic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pic;
+			sourceTree = "<group>";
+		};
+		63629F1B1F18ACBD0090E7C7 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		63629F1C1F18ACBD0090E7C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63629F1D1F18ACC30090E7C7 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				63629F1E1F18ACC30090E7C7 /* controller */,
+				63629F1F1F18ACC30090E7C7 /* Model */,
+				63629F201F18ACC30090E7C7 /* pic */,
+				63629F211F18ACC30090E7C7 /* VIew */,
+				63629F221F18ACC30090E7C7 /* ViewModel */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		63629F1E1F18ACC30090E7C7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				63629F331F18ADF20090E7C7 /* DVCViewController.h */,
+				63629F341F18ADF20090E7C7 /* DVCViewController.m */,
+				63629F351F18ADF20090E7C7 /* DVCViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		63629F1F1F18ACC30090E7C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63629F201F18ACC30090E7C7 /* pic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pic;
+			sourceTree = "<group>";
+		};
+		63629F211F18ACC30090E7C7 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		63629F221F18ACC30090E7C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63629F231F18ACC80090E7C7 /* D */ = {
+			isa = PBXGroup;
+			children = (
+				63629F241F18ACC80090E7C7 /* controller */,
+				63629F251F18ACC80090E7C7 /* Model */,
+				63629F261F18ACC80090E7C7 /* pic */,
+				63629F271F18ACC80090E7C7 /* VIew */,
+				63629F281F18ACC80090E7C7 /* ViewModel */,
+			);
+			path = D;
+			sourceTree = "<group>";
+		};
+		63629F241F18ACC80090E7C7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				63629F381F18AE040090E7C7 /* DVDViewController.h */,
+				63629F391F18AE040090E7C7 /* DVDViewController.m */,
+				63629F3A1F18AE040090E7C7 /* DVDViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		63629F251F18ACC80090E7C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63629F261F18ACC80090E7C7 /* pic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pic;
+			sourceTree = "<group>";
+		};
+		63629F271F18ACC80090E7C7 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		63629F281F18ACC80090E7C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		637C86CF1F13325C0064E951 = {
 			isa = PBXGroup;
 			children = (
@@ -718,8 +946,6 @@
 				637C87131F1362760064E951 /* Section */,
 				637C87141F1362760064E951 /* Third */,
 				637C87151F1362760064E951 /* Util */,
-				637C870F1F1362220064E951 /* ViewController.h */,
-				637C87101F1362220064E951 /* ViewController.m */,
 				637C86DB1F13325D0064E951 /* Supporting Files */,
 			);
 			path = GitBucketOverWrite;
@@ -777,7 +1003,15 @@
 		637C87131F1362760064E951 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				63629F231F18ACC80090E7C7 /* D */,
+				63629F1D1F18ACC30090E7C7 /* C */,
+				63629F111F18ACB50090E7C7 /* B */,
+				63629F171F18ACBD0090E7C7 /* A */,
 				635853A61F15FDA60001ECDD /* Login */,
+				63629F3D1F18AF660090E7C7 /* DVHomeTableBarController.h */,
+				63629F3E1F18AF660090E7C7 /* DVHomeTableBarController.m */,
+				63629F401F18C81A0090E7C7 /* DVHomeTabbarViewModel.h */,
+				63629F411F18C81B0090E7C7 /* DVHomeTabbarViewModel.m */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -1124,6 +1358,8 @@
 			files = (
 				635853411F15CD8B0001ECDD /* assets.bundle in Resources */,
 				635853471F15CD8B0001ECDD /* icon-error@2x.png in Resources */,
+				63629F371F18ADF20090E7C7 /* DVCViewController.xib in Resources */,
+				63629F2D1F18ADCC0090E7C7 /* DVAViewcontroller.xib in Resources */,
 				6358534F1F15CD8B0001ECDD /* LICENSE in Resources */,
 				635853481F15CD8B0001ECDD /* icon-info.png in Resources */,
 				635853491F15CD8B0001ECDD /* icon-info@2x.png in Resources */,
@@ -1131,6 +1367,7 @@
 				635853851F15CDDE0001ECDD /* update_v1_1_0.sql in Resources */,
 				6358534A1F15CD8B0001ECDD /* icon-success.png in Resources */,
 				6358534B1F15CD8B0001ECDD /* icon-success@2x.png in Resources */,
+				63629F321F18ADDE0090E7C7 /* DVBViewController.xib in Resources */,
 				6358534D1F15CD8B0001ECDD /* LICENSE in Resources */,
 				635853521F15CD8B0001ECDD /* TGRImageViewController.xib in Resources */,
 				637C86EB1F13325D0064E951 /* LaunchScreen.storyboard in Resources */,
@@ -1139,6 +1376,7 @@
 				635853461F15CD8B0001ECDD /* icon-error.png in Resources */,
 				6358537A1F15CDDE0001ECDD /* Sinces.json in Resources */,
 				637C86E61F13325D0064E951 /* Main.storyboard in Resources */,
+				63629F3C1F18AE040090E7C7 /* DVDViewController.xib in Resources */,
 				635853791F15CDDE0001ECDD /* Languages.json in Resources */,
 				635853841F15CDDE0001ECDD /* update_v1_0_1.sql in Resources */,
 				635853781F15CDDE0001ECDD /* Countries.json in Resources */,
@@ -1216,12 +1454,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				635853421F15CD8B0001ECDD /* BarItem.m in Sources */,
+				63629F421F18C81B0090E7C7 /* DVHomeTabbarViewModel.m in Sources */,
 				635853B71F15FFE50001ECDD /* DVViewModelServiceImp.m in Sources */,
 				6316B6341F162A4D008D4351 /* DVNavigationStack.m in Sources */,
 				635853171F15CC5C0001ECDD /* UIImage+ImageEffects.m in Sources */,
 				635853531F15CD8B0001ECDD /* TGRImageZoomAnimationController.m in Sources */,
 				635853161F15CC5C0001ECDD /* MRCUtil.m in Sources */,
 				6316B63F1F1631C5008D4351 /* NSDictionary+existObjectForkey.m in Sources */,
+				63629F481F18C9E50090E7C7 /* DVTabBarController.m in Sources */,
 				6358534E1F15CD8B0001ECDD /* README.md in Sources */,
 				6358537B1F15CDDE0001ECDD /* MRCAppStoreServiceImpl.m in Sources */,
 				63151C891F170B35001DC1E6 /* DVNavigationController.m in Sources */,
@@ -1231,10 +1471,10 @@
 				6358531B1F15CC5C0001ECDD /* NSURL+MRCLink.m in Sources */,
 				635853451F15CD8B0001ECDD /* README.md in Sources */,
 				635853181F15CC5C0001ECDD /* UIImage+MRCOcticons.m in Sources */,
-				637C87111F1362220064E951 /* ViewController.m in Sources */,
 				635853431F15CD8B0001ECDD /* CBStoreHouseRefreshControl.m in Sources */,
 				63D7DA7A1F14C8C900AFDD21 /* DVFactory.m in Sources */,
 				635853B11F15FE550001ECDD /* DVViewModel.m in Sources */,
+				63629F3B1F18AE040090E7C7 /* DVDViewController.m in Sources */,
 				635853811F15CDDE0001ECDD /* OCTRef+MRCUtil.m in Sources */,
 				6316B6371F162F27008D4351 /* DVRouter.m in Sources */,
 				6358537E1F15CDDE0001ECDD /* OCTClient+MRCRepository.m in Sources */,
@@ -1249,18 +1489,22 @@
 				6358537D1F15CDDE0001ECDD /* MRCSearch.m in Sources */,
 				637C86E01F13325D0064E951 /* AppDelegate.m in Sources */,
 				635853801F15CDDE0001ECDD /* OCTEvent+MRCPersistence.m in Sources */,
+				63629F2C1F18ADCC0090E7C7 /* DVAViewcontroller.m in Sources */,
 				635853B41F15FE680001ECDD /* DVViewController.m in Sources */,
 				635853541F15CD8B0001ECDD /* UIImage+AspectFit.m in Sources */,
 				63151CA51F175C14001DC1E6 /* MRCTableView.m in Sources */,
 				635853871F15CDDE0001ECDD /* YYCache+MRCAdditions.m in Sources */,
 				635853131F15CC5C0001ECDD /* UIView+Borders.m in Sources */,
 				6358531E1F15CC5C0001ECDD /* OCTRef+MRCAdditions.m in Sources */,
+				63629F361F18ADF20090E7C7 /* DVCViewController.m in Sources */,
 				635853821F15CDDE0001ECDD /* OCTRepository+MRCPersistence.m in Sources */,
 				6358531D1F15CC5C0001ECDD /* OCTEvent+MRCAttributedString.m in Sources */,
 				635853831F15CDDE0001ECDD /* OCTUser+MRCPersistence.m in Sources */,
 				6358537F1F15CDDE0001ECDD /* OCTClient+MRCUser.m in Sources */,
 				635853121F15CC5C0001ECDD /* UIImage+RTTint.m in Sources */,
+				63629F311F18ADDE0090E7C7 /* DVBViewController.m in Sources */,
 				63D7CDB61F1483A200AFDD21 /* DVConst.m in Sources */,
+				63629F3F1F18AF660090E7C7 /* DVHomeTableBarController.m in Sources */,
 				635853141F15CC5C0001ECDD /* MRCErrors.m in Sources */,
 				63151C9D1F171C66001DC1E6 /* LoginViewController.m in Sources */,
 				637C86DD1F13325D0064E951 /* main.m in Sources */,

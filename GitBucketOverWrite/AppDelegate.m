@@ -10,6 +10,7 @@
 #import <Appirater/Appirater.h>
 #import "DVViewModelServiceImp.h"
 #import "DVLoginViewModel.h"
+#import "DVHomeTabbarViewModel.h"
 
 @interface AppDelegate ()
 @property(nonatomic, strong) DVViewModelServiceImp *service;
@@ -36,8 +37,7 @@
     [self.service resetRootViewModel:[self getTheOriganViewModel]];
     [self.window makeKeyAndVisible];
     
-    
-    // Save the application version info.
+
     [[NSUserDefaults standardUserDefaults] setValue:MRC_APP_VERSION forKey:MRCApplicationVersionKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
@@ -50,21 +50,23 @@
 
 
 - (DVViewModel *)getTheOriganViewModel {
-//    if ([SSKeychain rawLogin].isExist && [SSKeychain accessToken].isExist) {
-//        // Some OctoKit APIs will use the `login` property of `OCTUser`.
-//        OCTUser *user = [OCTUser mrc_userWithRawLogin:[SSKeychain rawLogin] server:OCTServer.dotComServer];
-//        
-//        OCTClient *authenticatedClient = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
-//        self.service.client = authenticatedClient;
-//        
-//        return  [[DVViewModel alloc]init];
-////        return [[MRCHomepageViewModel alloc] initWithServices:self.services params:nil];
-//    } else {
-//        return (DVViewModel *)[[DVLoginViewModel alloc] initWithServices:self.service params:nil];
-//
-//    }
+    if ([SSKeychain rawLogin].isExist && [SSKeychain accessToken].isExist) {
+        // Some OctoKit APIs will use the `login` property of `OCTUser`.
+        OCTUser *user = [OCTUser mrc_userWithRawLogin:[SSKeychain rawLogin] server:OCTServer.dotComServer];
+        
+        OCTClient *authenticatedClient = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
+        self.service.client = authenticatedClient;
+  //        return [[MRCHomepageViewModel alloc] initWithServices:self.services params:nil];
+        
+        DVHomeTabbarViewModel *viewModel = [[DVHomeTabbarViewModel alloc]initWithServices:self.service params:nil];
+        return viewModel;
+        
+    } else {
+        return (DVViewModel *)[[DVLoginViewModel alloc] initWithServices:self.service params:nil];
 
-    return (DVViewModel *)[[DVLoginViewModel alloc] initWithServices:self.service params:nil];
+    }
+
+//    return (DVViewModel *)[[DVLoginViewModel alloc] initWithServices:self.service params:nil];
 
 }
 

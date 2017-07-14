@@ -36,7 +36,7 @@
     if (_mapDict == nil) {
         _mapDict = @{
                      @"DVLoginViewModel"  : @"LoginViewController",
-                     @""  : @"",
+                     @"DVHomeTabbarViewModel"  : @"DVHomeTableBarController",
                      @""  : @"",
                      @""  : @"",
                      @""  : @"",
