@@ -76,7 +76,6 @@
 		63629EED1F185E7F0090E7C7 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA3A1F14B92B00AFDD21 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63629EEE1F185E870090E7C7 /* Mantle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA491F14B93F00AFDD21 /* Mantle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63629F2C1F18ADCC0090E7C7 /* DVAViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F2A1F18ADCC0090E7C7 /* DVAViewcontroller.m */; };
-		63629F2D1F18ADCC0090E7C7 /* DVAViewcontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63629F2B1F18ADCC0090E7C7 /* DVAViewcontroller.xib */; };
 		63629F311F18ADDE0090E7C7 /* DVBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F2F1F18ADDE0090E7C7 /* DVBViewController.m */; };
 		63629F321F18ADDE0090E7C7 /* DVBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63629F301F18ADDE0090E7C7 /* DVBViewController.xib */; };
 		63629F361F18ADF20090E7C7 /* DVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63629F341F18ADF20090E7C7 /* DVCViewController.m */; };
@@ -93,6 +92,10 @@
 		637C86EB1F13325D0064E951 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637C86E91F13325D0064E951 /* LaunchScreen.storyboard */; };
 		637C86F61F13325D0064E951 /* GitBucketOverWriteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C86F51F13325D0064E951 /* GitBucketOverWriteTests.m */; };
 		637C87011F13325D0064E951 /* GitBucketOverWriteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 637C87001F13325D0064E951 /* GitBucketOverWriteUITests.m */; };
+		6384CB411F1C48D100613904 /* DVAViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6384CB401F1C48D100613904 /* DVAViewModel.m */; };
+		6384CB551F1C570900613904 /* DVTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6384CB531F1C570900613904 /* DVTableViewController.m */; };
+		6384CB561F1C570900613904 /* DVTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6384CB541F1C570900613904 /* DVTableViewController.xib */; };
+		6384CB591F1C572100613904 /* DVTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6384CB581F1C572100613904 /* DVTableViewModel.m */; };
 		63D7CDB61F1483A200AFDD21 /* DVConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDB31F1483A200AFDD21 /* DVConst.m */; };
 		63D7DA501F14BC8C00AFDD21 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA3A1F14B92B00AFDD21 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		63D7DA511F14BC9700AFDD21 /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D7DA291F14B8E600AFDD21 /* OctoKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -362,7 +365,6 @@
 		635853BB1F16211D0001ECDD /* DVViewModelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVViewModelService.h; sourceTree = "<group>"; };
 		63629F291F18ADCC0090E7C7 /* DVAViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVAViewcontroller.h; sourceTree = "<group>"; };
 		63629F2A1F18ADCC0090E7C7 /* DVAViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVAViewcontroller.m; sourceTree = "<group>"; };
-		63629F2B1F18ADCC0090E7C7 /* DVAViewcontroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVAViewcontroller.xib; sourceTree = "<group>"; };
 		63629F2E1F18ADDE0090E7C7 /* DVBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVBViewController.h; sourceTree = "<group>"; };
 		63629F2F1F18ADDE0090E7C7 /* DVBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVBViewController.m; sourceTree = "<group>"; };
 		63629F301F18ADDE0090E7C7 /* DVBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVBViewController.xib; sourceTree = "<group>"; };
@@ -393,6 +395,13 @@
 		637C87001F13325D0064E951 /* GitBucketOverWriteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitBucketOverWriteUITests.m; sourceTree = "<group>"; };
 		637C87021F13325D0064E951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		637C87171F1363FA0064E951 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6384CB3F1F1C48D100613904 /* DVAViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVAViewModel.h; sourceTree = "<group>"; };
+		6384CB401F1C48D100613904 /* DVAViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVAViewModel.m; sourceTree = "<group>"; };
+		6384CB521F1C570900613904 /* DVTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTableViewController.h; sourceTree = "<group>"; };
+		6384CB531F1C570900613904 /* DVTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVTableViewController.m; sourceTree = "<group>"; };
+		6384CB541F1C570900613904 /* DVTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVTableViewController.xib; sourceTree = "<group>"; };
+		6384CB571F1C572100613904 /* DVTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTableViewModel.h; sourceTree = "<group>"; };
+		6384CB581F1C572100613904 /* DVTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVTableViewModel.m; sourceTree = "<group>"; };
 		63D7CDB21F1483A200AFDD21 /* DVConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVConst.h; sourceTree = "<group>"; };
 		63D7CDB31F1483A200AFDD21 /* DVConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVConst.m; sourceTree = "<group>"; };
 		63D7CDB41F1483A200AFDD21 /* DVMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVMacro.h; sourceTree = "<group>"; };
@@ -645,6 +654,11 @@
 			children = (
 				635853B21F15FE680001ECDD /* DVViewController.h */,
 				635853B31F15FE680001ECDD /* DVViewController.m */,
+				63629F461F18C9E50090E7C7 /* DVTabBarController.h */,
+				63629F471F18C9E50090E7C7 /* DVTabBarController.m */,
+				6384CB521F1C570900613904 /* DVTableViewController.h */,
+				6384CB531F1C570900613904 /* DVTableViewController.m */,
+				6384CB541F1C570900613904 /* DVTableViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -654,8 +668,8 @@
 			children = (
 				635853AF1F15FE550001ECDD /* DVViewModel.h */,
 				635853B01F15FE550001ECDD /* DVViewModel.m */,
-				63629F461F18C9E50090E7C7 /* DVTabBarController.h */,
-				63629F471F18C9E50090E7C7 /* DVTabBarController.m */,
+				6384CB571F1C572100613904 /* DVTableViewModel.h */,
+				6384CB581F1C572100613904 /* DVTableViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -780,7 +794,6 @@
 			children = (
 				63629F291F18ADCC0090E7C7 /* DVAViewcontroller.h */,
 				63629F2A1F18ADCC0090E7C7 /* DVAViewcontroller.m */,
-				63629F2B1F18ADCC0090E7C7 /* DVAViewcontroller.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -809,6 +822,8 @@
 		63629F1C1F18ACBD0090E7C7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6384CB3F1F1C48D100613904 /* DVAViewModel.h */,
+				6384CB401F1C48D100613904 /* DVAViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -985,13 +1000,13 @@
 		637C87121F1362760064E951 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
-				63151CA21F175BFF001DC1E6 /* View */,
 				63151C871F170B35001DC1E6 /* DVNavigationController.h */,
 				63151C881F170B35001DC1E6 /* DVNavigationController.m */,
 				6316B6321F162A4D008D4351 /* DVNavigationStack.h */,
 				6316B6331F162A4D008D4351 /* DVNavigationStack.m */,
 				6316B6351F162F27008D4351 /* DVRouter.h */,
 				6316B6361F162F27008D4351 /* DVRouter.m */,
+				63151CA21F175BFF001DC1E6 /* View */,
 				6316B6311F162A23008D4351 /* Service */,
 				6358538C1F15CFA60001ECDD /* ViewModel */,
 				635853881F15CF5D0001ECDD /* ViewController */,
@@ -1359,7 +1374,6 @@
 				635853411F15CD8B0001ECDD /* assets.bundle in Resources */,
 				635853471F15CD8B0001ECDD /* icon-error@2x.png in Resources */,
 				63629F371F18ADF20090E7C7 /* DVCViewController.xib in Resources */,
-				63629F2D1F18ADCC0090E7C7 /* DVAViewcontroller.xib in Resources */,
 				6358534F1F15CD8B0001ECDD /* LICENSE in Resources */,
 				635853481F15CD8B0001ECDD /* icon-info.png in Resources */,
 				635853491F15CD8B0001ECDD /* icon-info@2x.png in Resources */,
@@ -1369,6 +1383,7 @@
 				6358534B1F15CD8B0001ECDD /* icon-success@2x.png in Resources */,
 				63629F321F18ADDE0090E7C7 /* DVBViewController.xib in Resources */,
 				6358534D1F15CD8B0001ECDD /* LICENSE in Resources */,
+				6384CB561F1C570900613904 /* DVTableViewController.xib in Resources */,
 				635853521F15CD8B0001ECDD /* TGRImageViewController.xib in Resources */,
 				637C86EB1F13325D0064E951 /* LaunchScreen.storyboard in Resources */,
 				637C86E81F13325D0064E951 /* Assets.xcassets in Resources */,
@@ -1454,6 +1469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				635853421F15CD8B0001ECDD /* BarItem.m in Sources */,
+				6384CB591F1C572100613904 /* DVTableViewModel.m in Sources */,
 				63629F421F18C81B0090E7C7 /* DVHomeTabbarViewModel.m in Sources */,
 				635853B71F15FFE50001ECDD /* DVViewModelServiceImp.m in Sources */,
 				6316B6341F162A4D008D4351 /* DVNavigationStack.m in Sources */,
@@ -1461,6 +1477,7 @@
 				635853531F15CD8B0001ECDD /* TGRImageZoomAnimationController.m in Sources */,
 				635853161F15CC5C0001ECDD /* MRCUtil.m in Sources */,
 				6316B63F1F1631C5008D4351 /* NSDictionary+existObjectForkey.m in Sources */,
+				6384CB411F1C48D100613904 /* DVAViewModel.m in Sources */,
 				63629F481F18C9E50090E7C7 /* DVTabBarController.m in Sources */,
 				6358534E1F15CD8B0001ECDD /* README.md in Sources */,
 				6358537B1F15CDDE0001ECDD /* MRCAppStoreServiceImpl.m in Sources */,
@@ -1490,6 +1507,7 @@
 				637C86E01F13325D0064E951 /* AppDelegate.m in Sources */,
 				635853801F15CDDE0001ECDD /* OCTEvent+MRCPersistence.m in Sources */,
 				63629F2C1F18ADCC0090E7C7 /* DVAViewcontroller.m in Sources */,
+				6384CB551F1C570900613904 /* DVTableViewController.m in Sources */,
 				635853B41F15FE680001ECDD /* DVViewController.m in Sources */,
 				635853541F15CD8B0001ECDD /* UIImage+AspectFit.m in Sources */,
 				63151CA51F175C14001DC1E6 /* MRCTableView.m in Sources */,

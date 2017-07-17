@@ -6,8 +6,8 @@
 //  Copyright © 2017年 David. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DVTabBarController.h"
 
-@interface DVHomeTableBarController : UITabBarController
+@interface DVHomeTableBarController : DVTabBarController
 
 @end

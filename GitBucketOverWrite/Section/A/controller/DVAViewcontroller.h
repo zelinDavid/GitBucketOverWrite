@@ -6,8 +6,8 @@
 //  Copyright © 2017年 David. All rights reserved.
 //
 
-#import "DVViewController.h"
+#import "DVTableViewController.h"
 
-@interface DVAViewcontroller : DVViewController
+@interface DVAViewcontroller : DVTableViewController
 
 @end

@@ -66,7 +66,7 @@ alpha:1.0]
 /// AppDelegate
 ///------------
 
-#define DVSharedAppDelegate ((MRCAppDelegate *)[UIApplication sharedApplication].delegate)
+#define DVSharedAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 ///----------------------
 /// Persistence Directory
@@ -79,7 +79,7 @@ alpha:1.0]
 
 
 
-
+#define DVAssertTip_overwrite      NSAssert(NO, @"must overwriteTheMethodBySubClass");
 
 
 

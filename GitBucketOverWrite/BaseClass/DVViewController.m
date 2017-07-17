@@ -21,6 +21,7 @@
     @weakify(viewController)
     [[viewController rac_signalForSelector:@selector(viewDidLoad)]subscribeNext:^(id x) {
         @strongify(viewController)
+        [viewController customInit];
          [viewController bindViewModel];
     }];
   
@@ -47,18 +48,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.extendedLayoutIncludesOpaqueBars = YES;
+//    self.extendedLayoutIncludesOpaqueBars = YES;
  
 
 }
+
+
+-(void)customInit{}
 
 
 
 
 -(void)bindViewModel {
     RAC(self,title) = RACObserve(self.viewModel, title);
-    
-    @weakify(self)
+     @weakify(self)
     [self.viewModel.errorSignal subscribeNext:^(NSError *error) {
         @strongify(self)
         

@@ -12,6 +12,7 @@
 #import "DVCViewController.h"
 #import "DVDViewController.h"
 #import "DVNavigationController.h"
+#import "DVAViewModel.h"
 
 
 @interface DVHomeTableBarController ()
@@ -23,29 +24,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    DVAViewcontroller *aViewController = [[DVAViewcontroller alloc]initWithModel:nil];
+    DVAViewModel *aViewModel = [[DVAViewModel alloc]initWithServices:DVSharedAppDelegate.service params:@{@"title":@"dddd"}];
+     DVAViewcontroller *aViewController = [[DVAViewcontroller alloc]initWithModel:aViewModel];
     aViewController.navigationItem.title = @"News";
-    aViewController.tabBarItem.image  = [[UIImage imageNamed:@""]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    DVNavigationController *navA = [[DVNavigationController alloc]initWithRootViewController:aViewController];
+    aViewController.tabBarItem.image  = [[UIImage imageNamed:@"icon-info"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    aViewController.tabBarItem.selectedImage  = [[UIImage imageNamed:@"icon-erro"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+     DVNavigationController *navA = [[DVNavigationController alloc]initWithRootViewController:aViewController];
     
     DVBViewController *bViewController = [[DVBViewController alloc]init];
-    bViewController.navigationItem.title = @"b";
-    bViewController.tabBarItem.image  = [[UIImage imageNamed:@"UMS_douban_on.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    DVNavigationController *navB = [[DVNavigationController alloc]initWithRootViewController:bViewController];
+    bViewController.navigationItem.title = @"sssssss";
+    bViewController.tabBarItem.image  = [[UIImage imageNamed:@"icon-info"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    bViewController.tabBarItem.selectedImage  = [[UIImage imageNamed:@"icon-erro"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    bViewController.tabBarItem.title = @"Repo";
+     DVNavigationController *navB = [[DVNavigationController alloc]initWithRootViewController:bViewController];
 
     DVCViewController * cViewController = [[DVCViewController alloc]init];
-    cViewController.navigationItem.title = @"C";
-    cViewController.tabBarItem.image  = [[UIImage imageNamed:@"UMS_douban_on.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    cViewController.navigationItem.title = @"Find";
+    cViewController.tabBarItem.image  = [[UIImage imageNamed:@"icon-info"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    cViewController.tabBarItem.selectedImage  = [[UIImage imageNamed:@"icon-erro"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    cViewController.tabBarItem.title = @"Find";
     DVNavigationController *navC = [[DVNavigationController alloc]initWithRootViewController:cViewController];
-
     
     DVDViewController * dViewController = [[DVDViewController alloc]init];
-    dViewController.navigationItem.title = @"D";
-    dViewController.tabBarItem.image  = [[UIImage imageNamed:@"UMS_douban_on.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    dViewController.navigationItem.title = @"Mine";
+    dViewController.tabBarItem.image  = [[UIImage imageNamed:@"icon-info"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    dViewController.tabBarItem.selectedImage  = [[UIImage imageNamed:@"icon-erro"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    dViewController.tabBarItem.title = @"Mine";
     DVNavigationController *navD = [[DVNavigationController alloc]initWithRootViewController:dViewController];
+     self.tabBarController.viewControllers = [NSArray arrayWithObjects:navA, navB, navC, navD, nil];
 
-    self.viewControllers = [NSArray arrayWithObjects:navA, navB, navC, navD, nil];
+    
+}
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+    
 }
 
 

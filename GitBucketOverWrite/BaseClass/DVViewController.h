@@ -15,6 +15,7 @@
 
 -(instancetype)initWithModel:(DVViewModel *)viewModel ;
 
+-(void)customInit ;
 -(void)bindViewModel ;
 
 

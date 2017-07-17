@@ -8,12 +8,11 @@
 
 #import "AppDelegate.h"
 #import <Appirater/Appirater.h>
-#import "DVViewModelServiceImp.h"
 #import "DVLoginViewModel.h"
 #import "DVHomeTabbarViewModel.h"
+#import "DVTabBarController.h"
 
 @interface AppDelegate ()
-@property(nonatomic, strong) DVViewModelServiceImp *service;
 @property(nonatomic, strong) Reachability *reachability;
 
 @end
@@ -66,8 +65,7 @@
 
     }
 
-//    return (DVViewModel *)[[DVLoginViewModel alloc] initWithServices:self.service params:nil];
-
+ 
 }
 
 

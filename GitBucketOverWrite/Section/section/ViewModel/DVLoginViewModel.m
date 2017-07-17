@@ -7,7 +7,8 @@
 //
 
 #import "DVLoginViewModel.h"
- 
+#import "DVHomeTableBarController.h"
+
 @implementation DVLoginViewModel
 
 -(void)customInitialize {
@@ -35,9 +36,9 @@
         SSKeychain.rawLogin = authenticatedClient.user.rawLogin;
         SSKeychain.password = self.password;
         SSKeychain.accessToken = authenticatedClient.token;
- //        MRCHomepageViewModel *viewModel = [[MRCHomepageViewModel alloc] initWithServices:self.services params:nil];
-        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.service resetRootViewModel:viewModel];
+         dispatch_async(dispatch_get_main_queue(), ^{
+             DVHomeTableBarController *tabBarController = [[DVHomeTableBarController alloc]init];
+             DVSharedAppDelegate.window.rootViewController = tabBarController;
         });
         NSLog(@"登录成功");
     };

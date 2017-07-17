@@ -67,7 +67,7 @@
     }];
     
     [self.viewModel.loginCommand.errors subscribeNext:^(id x) {
-        NSLog(@"登录失败");
+        NSLog(@"登录失败---%@",x);
         
     }];
     NSLog(@"%@",self.viewModel);

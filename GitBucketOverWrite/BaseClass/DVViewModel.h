@@ -43,5 +43,8 @@ typedef NS_ENUM(NSUInteger,TitleViewType) {
 
 -(void)customInitialize;
 
+-(RACSignal *)remoteRequestLoading:(NSNumber *)page ;
+
+
 
 @end

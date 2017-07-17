@@ -21,7 +21,10 @@
     
     [self addChildViewController:_tabBarController];
     [self.view addSubview:self.tabBarController.view];
+    _tabBarController.tabBar.translucent = NO;
     
+    _tabBarController.tabBar.backgroundColor = [UIColor grayColor];
+
 }
 
 
